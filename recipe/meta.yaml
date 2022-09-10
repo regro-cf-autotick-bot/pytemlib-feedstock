@@ -1,5 +1,5 @@
 {% set name = "pyTEMlib" %}
-{% set version = "0.2022.8.9" %}
+{% set version = "0.2022.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b111dd18566e5ea09bafc7a59c3ee24b2bf6aeca409239af706270b420b49aae
+  sha256: 057a582913f8a650ac5b8dcb4d9afc7d456fbcb0626d999538dfc065027ec6eb
 build:
   noarch: python
   number: 0 
@@ -53,6 +53,7 @@ test:
     - pyTEMlib.eels_tools
     - pyTEMlib.eels_dialog_utilities
     - pyTEMlib.file_tools
+    - pyTEMlib.file_tools_qt
     - pyTEMlib.graph_tools
     - pyTEMlib.graph_viz
     - pyTEMlib.image_dialog
