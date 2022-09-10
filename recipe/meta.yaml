@@ -53,8 +53,8 @@ test:
     - pyTEMlib.eels_tools
     - pyTEMlib.eels_dialog_utilities
     - pyTEMlib.file_tools
+    - pyTEMlib.file_tools_qt
     - pyTEMlib.graph_tools
-    - pyTEMlib.graph_tools_qt
     - pyTEMlib.graph_viz
     - pyTEMlib.image_dialog
     - pyTEMlib.image_dlg
