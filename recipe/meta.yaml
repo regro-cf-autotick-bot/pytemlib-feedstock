@@ -29,7 +29,10 @@ requirements:
     - lxml
     - tqdm
     - plotly
-    - pandas
+    - bokeh
+    - ipywidgets
+    - arm_pyart
+    - ipython
     - spglib
     - requests
     - scikit-image
