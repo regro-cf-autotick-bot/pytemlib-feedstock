@@ -1,5 +1,5 @@
 {% set name = "pyTEMlib" %}
-{% set version = "0.2022.9.0" %}
+{% set version = "0.2023.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 057a582913f8a650ac5b8dcb4d9afc7d456fbcb0626d999538dfc065027ec6eb
+  sha256: b5c272c2eaff3684d60fe9b3bf1179a09268a0a2b90e640406a165556fcd4834
 build:
   noarch: python
-  number: 0 
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - pyTEMlib = pyTEMlib:main
@@ -72,13 +72,13 @@ test:
     - pyTEMlib.simulation_tools
     - pyTEMlib.viz
     - pyTEMlib.xrpa_x_sections
-    
+
 about:
   home: https://github.com/pycroscopy/pyTEMlib
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: Tools to read and process (scanning) transmission electron microscopy (STEM) data 
+  summary: Tools to read and process (scanning) transmission electron microscopy (STEM) data
   doc_url: https://pycroscopy.github.io/pyTEMlib/
   dev_url: https://github.com/pycroscopy/pyTEMlib
 
