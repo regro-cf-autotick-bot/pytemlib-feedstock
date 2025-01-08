@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 057a582913f8a650ac5b8dcb4d9afc7d456fbcb0626d999538dfc065027ec6eb
 build:
   noarch: python
-  number: 0 
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - pyTEMlib = pyTEMlib:main
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - pytest-runner
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - scipy
     - numpy
     - pillow
@@ -40,6 +40,8 @@ requirements:
     - h5py >=3.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pyTEMlib
     - pyTEMlib.animation
